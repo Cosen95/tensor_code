@@ -1,0 +1,14 @@
+{
+  "name": "tensor_code",
+  "version": "1.0.0",
+  "description": "tensorFlow.js 机器学习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fengshuan95@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^1.5.2"
+  }
+}
