@@ -1,6 +1,6 @@
 # tensor_code :tada:
 
-## 记录
+## 记录 :memo:
 
 ### 机器学习
 
