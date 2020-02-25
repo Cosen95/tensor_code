@@ -22,7 +22,7 @@ window.onload = async () => {
   const labels = tf.tensor(ys);
   await model.fit(inputs, labels, {
     batchSize: 4,
-    epochs: 100,
+    epochs: 400,
     callbacks: tfvis.show.fitCallbacks(
       {
         name: "训练过程"
@@ -30,4 +30,7 @@ window.onload = async () => {
       ["loss"]
     )
   });
+
+  const output = model.predict(tf.tensor([5]));
+  alert(`如果 x 为 5，那么预测 y 为 ${output.dataSync()[0]}`);
 };
