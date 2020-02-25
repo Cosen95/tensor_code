@@ -2,6 +2,9 @@
 
 ## 记录 :memo:
 
+> - 谷歌机器学习文档：https://developers.google.com/machine-learning/crash-course?hl=zh-cn
+> - TensorFlow.js 官方文档：https://www.tensorflow.org/
+
 ### :one: 机器学习
 
 #### 机器学习是什么？
