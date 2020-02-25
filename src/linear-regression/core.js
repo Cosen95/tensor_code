@@ -13,5 +13,8 @@ window.onload = () => {
 
   const model = tf.sequential();
   model.add(tf.layers.dense({ units: 1, inputShape: [1] }));
-  model.compile({ loss: tf.losses.meanSquaredError }); // 均方误差（mse）
+  model.compile({
+    loss: tf.losses.meanSquaredError,
+    optimizer: tf.train.sgd(0.1)
+  }); // 均方误差（mse）
 };
