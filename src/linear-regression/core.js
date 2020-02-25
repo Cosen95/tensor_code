@@ -1,7 +1,7 @@
 import * as tf from "@tensorflow/tfjs";
 import * as tfvis from "@tensorflow/tfjs-vis";
 
-window.onload = () => {
+window.onload = async () => {
   const xs = [1, 2, 3, 4];
   const ys = [1, 3, 5, 7];
 
@@ -17,4 +17,17 @@ window.onload = () => {
     loss: tf.losses.meanSquaredError,
     optimizer: tf.train.sgd(0.1)
   }); // 均方误差（mse）
+
+  const inputs = tf.tensor(xs);
+  const labels = tf.tensor(ys);
+  await model.fit(inputs, labels, {
+    batchSize: 4,
+    epochs: 100,
+    callbacks: tfvis.show.fitCallbacks(
+      {
+        name: "训练过程"
+      },
+      ["loss"]
+    )
+  });
 };
