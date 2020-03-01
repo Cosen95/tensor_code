@@ -33,4 +33,11 @@ window.onload = async () => {
     epochs: 50,
     callbacks: tfvis.show.fitCallbacks({ name: "训练过程" }, ["loss"])
   });
+
+  window.predict = form => {
+    const predictRes = model.predict(
+      tf.tensor([[form.x.value * 1, form.y.value * 1]])
+    );
+    alert(`预测结果：${predictRes.dataSync()[0]}`);
+  };
 };
