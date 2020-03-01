@@ -23,4 +23,5 @@ window.onload = () => {
       activation: "sigmoid"
     })
   );
+  model.compile({ loss: tf.losses.logLoss });
 };
